@@ -1,0 +1,29 @@
+<div class="container-item">
+    <p-table [value]="character" [paginator]="true" [rows]="5" responsiveLayout="scroll"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+        <ng-template pTemplate="header">
+            <tr>
+                <th> <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input type="text" pInputText placeholder="Search (By name)" [(ngModel)]="characterName" (keyup)="characterSearchOnList()" />
+                </span></th>
+                <th>Name</th>
+                <th>Race</th>
+                <th>Gender</th>
+                <th>Health</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-c>
+            <tr id="table-cursor" (click)="goCharacterInfo2(c.id)">
+                <td><img style="max-width: 150px;" src="{{c.img}}"></td>
+                <td style="font-size: 3em;" class="item fuente"><b>{{c.name}}</b></td>
+                <td class="item fuente">{{c.race}}</td>
+                <td class="item">
+                    <p style="color:lightskyblue;" *ngIf="c.gender == 'Male'">{{c.gender}}</p>
+                    <p style="color:pink;" *ngIf="c.gender == 'Female'">{{c.gender}}</p>
+                </td>
+                <td class="item" style="color: red;">{{c.health}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
