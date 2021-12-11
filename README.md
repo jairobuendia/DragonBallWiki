@@ -1,5 +1,5 @@
 # DragonBallWiki
-![image](https://user-images.githubusercontent.com/55530657/145694370-4bb562a2-3638-4b82-9bfd-8db56c3b0f96.png) ![image](https://user-images.githubusercontent.com/55530657/145694378-2c45f423-cb36-466c-bc95-092f16dd64ff.png)
+![image](https://user-images.githubusercontent.com/55530657/145694548-3037198e-4d67-432a-9ba9-984ad7ccc5bb.png) ![image](https://user-images.githubusercontent.com/55530657/145694378-2c45f423-cb36-466c-bc95-092f16dd64ff.png)
 
 
 _Una maqueta desarrollada en Angular con componentes de PrimeNG, consiste en una aplicación web para consultar datos sobre los personajes de DragonBall_
