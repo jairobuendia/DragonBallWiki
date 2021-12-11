@@ -1,27 +1,36 @@
 # DragonBallWiki
+![image](https://user-images.githubusercontent.com/55530657/145694370-4bb562a2-3638-4b82-9bfd-8db56c3b0f96.png) ![image](https://user-images.githubusercontent.com/55530657/145694378-2c45f423-cb36-466c-bc95-092f16dd64ff.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
-## Development server
+_Una maqueta desarrollada en Angular con componentes de PrimeNG, consiste en una aplicación web para consultar datos sobre los personajes de DragonBall_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+HomePage: https://github.com/jairobuendia/DragonBallWiki/tree/master/src/app
 
-## Code scaffolding
+### Estructura 📋
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_Estructura breve del proyecto completo_
 
-## Build
+```
+- 2 componentes
+- 1 clase
+- 1 servicio
+- Base de datos local
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Capturas de pantalla🔧
 
-## Running unit tests
+_Capturas de pantalla independientes para cada página de la aplicación_
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+_--Home--_
 
-## Running end-to-end tests
+![image](https://user-images.githubusercontent.com/55530657/145694479-7c1573eb-db94-4272-a92c-c073f3f8e3ad.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image](https://user-images.githubusercontent.com/55530657/145694483-c8111f1b-c061-44ed-896a-ccaf9ccdd5dc.png)
 
-## Further help
+_--Página de cada personaje--_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/55530657/145694518-c75ab8f8-d59f-4c26-af5c-760213b1ba25.png)
+
+![image](https://user-images.githubusercontent.com/55530657/145694533-b51c182f-3d93-4270-9648-01d2bd1c8d0b.png)
+
+
