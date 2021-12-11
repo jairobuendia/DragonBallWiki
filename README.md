@@ -1,4 +1,6 @@
 # DragonBallWiki
+
+![dragonballLogo](https://user-images.githubusercontent.com/55530657/145694559-38ead340-d1e2-454a-8173-4d0c9fbd565d.png)
 ![image](https://user-images.githubusercontent.com/55530657/145694548-3037198e-4d67-432a-9ba9-984ad7ccc5bb.png) ![image](https://user-images.githubusercontent.com/55530657/145694378-2c45f423-cb36-466c-bc95-092f16dd64ff.png)
 
 
