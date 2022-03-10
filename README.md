@@ -31,6 +31,9 @@ _--Creación y modificación del personaje--_
 
 ![image](https://user-images.githubusercontent.com/55530657/157670414-b51c5cec-47e8-477c-b128-685e69f03f46.png)
 ![image](https://user-images.githubusercontent.com/55530657/157670436-38501af5-919d-452d-9879-b275cf37943e.png)
+
+_--Borrado de la lista--_
+![image](https://user-images.githubusercontent.com/55530657/157671835-73bbc89a-9bae-406a-bffa-2de31fde893d.png)
 ![image](https://user-images.githubusercontent.com/55530657/157671712-14067ed2-5601-42ce-8b90-55ddb0f7f09d.png)
 
 
