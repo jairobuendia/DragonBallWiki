@@ -3,11 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DragonBallWiki": {
+    "simwama-clase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         },
         "@schematics/angular:application": {
           "strict": true
@@ -20,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DragonBallWiki",
+            "outputPath": "dist/simwama-clase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,10 +53,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-indigo/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -43,8 +65,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -75,10 +97,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DragonBallWiki:build:production"
+              "browserTarget": "simwama-clase:build:production"
             },
             "development": {
-              "browserTarget": "DragonBallWiki:build:development"
+              "browserTarget": "simwama-clase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +108,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DragonBallWiki:build"
+            "browserTarget": "simwama-clase:build"
           }
         },
         "test": {
@@ -104,11 +126,21 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["../node_modules/chart.js/dist/Chart.js"]
+            "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "simwama-clase:build:production",
+            "firebaseProject": "simwama-clase-da0b6",
+            "firebaseHostingSite": "simwama-clase-da0b6"
           }
         }
       }
     }
   },
-  "defaultProject": "DragonBallWiki"
+  "defaultProject": "simwama-clase"
 }

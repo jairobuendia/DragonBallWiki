@@ -1,0 +1,14 @@
+<p-card header="{{character.name}}" subheader="{{character.race}}">
+    <ng-template pTemplate="header">
+        <div id="container">
+            <p-chart type="polarArea" [data]="datos"></p-chart>
+            <img alt="Card" style="max-width: 500px" (click)="showDialog()" src="{{character.img}}">
+            <p-dialog header="Abilities" [(visible)]="display" [style]="{width: '30vw'}">
+                <h2>{{character.abilities}}</h2>
+            </p-dialog>
+        </div>
+    </ng-template>
+    <p>{{character.bio}}</p>
+    <ng-template pTemplate="footer">
+    </ng-template>
+</p-card>

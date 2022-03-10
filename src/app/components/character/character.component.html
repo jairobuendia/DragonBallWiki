@@ -1,0 +1,127 @@
+<p-table [value]="(characters | async)!" [paginator]="true" [rows]="3">
+    <ng-template pTemplate="header">
+      <tr>
+        <th> <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Search (By name)" />
+          </span>
+        </th>
+        <th>Name</th>
+        <th>Race</th>
+        <th>Gender</th>
+        <th>Health</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-c>
+      <tr id="table-cursor" >
+        <td><img style="max-width: 150px; max-height: 200px;" src="{{c.img}}" (click)="goCharacterInfo(c.id)"></td>
+        <td style="font-size: 3em;" class="item fuente"><b>{{c.name}}</b></td>
+        <td class="item fuente">{{c.race}}</td>
+        <td class="item">
+            <p style="color:lightskyblue;" *ngIf="c.gender == 'Male'">{{c.gender}}</p>
+            <p style="color:pink;" *ngIf="c.gender == 'Female'">{{c.gender}}</p>
+            <p style="color:brown;" *ngIf="c.gender == 'Other'">{{c.gender}}</p>
+        </td>
+        <td class="item" style="color: red;">{{c.health}}</td>
+        <td style="width: 30px;">
+          <button pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-secondary p-button-outlined"
+            (click)="updateCharacterStep1(c.id)"></button>
+        </td>
+        <td>
+          <button pButton type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-outlined"
+            (click)="confirmDeleteCharacter(c)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <div class="add-button" >
+    <p-speedDial (click)="openCreateForm()" buttonClassName="p-button-warning"></p-speedDial>
+  </div>
+
+  <p-dialog [(visible)]="displayCharacterForm">
+    <ng-template pTemplate="header">
+      Character
+    </ng-template>
+    <!-- FORMULARIO -->
+    <form [formGroup]="characterForm" (ngSubmit)="formSubmit()">
+
+      <div class="card">
+        <div class="field">
+          <label for="name">Name: </label>
+          <input pInputText id="name" type="text" formControlName="name" style="width: 100%; margin-bottom: 10px;">
+        </div>
+
+        <div class="field">
+          <label for="race">Race: </label>
+          <input pInputText id="race" type="text" formControlName="race" style="width: 100%; margin-bottom: 10px;">
+        </div>
+
+        <div class="field">
+          <label for="gender">Gender: </label>
+          <select class="form-control form-control-lg" id="gender" formControlName="gender" style="width: 100%; height: 40px; font-size: 15px; margin-bottom: 10px;">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="health">Health: </label>
+          <input pInputText id="health" type="number" formControlName="health" style="width: 100%; margin-bottom: 10px;">
+        </div>
+
+        <div class="field">
+          <label for="attack">Attack: </label>
+          <input pInputText id="attack" type="number" formControlName="attack" style="width: 100%; margin-bottom: 10px;">
+        </div>
+
+        <div class="field">
+          <label for="defense">Defense: </label>
+          <input pInputText id="defense" type="number" formControlName="defense" style="width: 100%; margin-bottom: 10px;">
+        </div>
+
+        <div class="field">
+          <label for="bio">Description: </label>
+          <!-- <input pInputText id="bio" type="text" formControlName="bio" style="width: 100%; margin-bottom: 10px; height: 100px; font-size: 15px;"> -->
+          <textarea matInput id="bio" type="text" formControlName="bio" style="width: 100%; margin-bottom: 10px; height: 100px;" ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="abilities">Abilities: </label>
+          <input pInputText id="abilities" type="text" formControlName="abilities" style="width: 100%; margin-bottom: 10px; font-size: 12px;">
+    
+        </div>
+
+        <div class="field">
+          <label for="img">Picture: </label>
+          <input pInputText id="img" type="text" formControlName="img" style="width: 100%; margin-bottom: 30px;">
+        </div>
+      </div>
+
+      <p-footer>
+
+        <p-button type="submit" label="{{formButtonText}}" styleClass="p-button-success"></p-button>
+
+        <p-button (click)="displayCharacterForm = false" label="Cancel" styleClass="p-button-danger" style="margin-left: 80px;"></p-button>
+
+      </p-footer>
+
+    </form>
+
+
+  </p-dialog>
+
+  <!-- Delete confirmation dialog -->
+  <p-dialog [(visible)]="displayConfirmDelete">
+    <div class="card">
+      Are you sure you want to delete character {{descriptionFormDeletion }}?
+    </div>
+
+    <p-footer>
+      <p-button (click)="deleteCharacter()" label="Yes"></p-button>
+      <p-button (click)="displayConfirmDelete = false" label="No"></p-button>
+    </p-footer>
+  </p-dialog>
