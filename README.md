@@ -28,6 +28,7 @@ _--Home--_
 ![image](https://user-images.githubusercontent.com/55530657/157670208-fdcfd3c9-ecc4-4c73-a910-3696c449cfb8.png)
 
 _--Creación y modificación del personaje--_
+
 ![image](https://user-images.githubusercontent.com/55530657/157670414-b51c5cec-47e8-477c-b128-685e69f03f46.png)
 
 ![image](https://user-images.githubusercontent.com/55530657/157670436-38501af5-919d-452d-9879-b275cf37943e.png)
