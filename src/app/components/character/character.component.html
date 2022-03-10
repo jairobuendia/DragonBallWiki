@@ -117,11 +117,11 @@
   <!-- Delete confirmation dialog -->
   <p-dialog [(visible)]="displayConfirmDelete">
     <div class="card">
-      Are you sure you want to delete character {{descriptionFormDeletion }}?
+      Are you sure you want to delete character <strong>{{descriptionFormDeletion }}</strong>?
     </div>
 
     <p-footer>
-      <p-button (click)="deleteCharacter()" label="Yes"></p-button>
-      <p-button (click)="displayConfirmDelete = false" label="No"></p-button>
+      <p-button (click)="deleteCharacter()" label="Yes" styleClass="p-button-warning" style="position: absolute; left: 0; margin-left: 30px;"></p-button>
+      <p-button (click)="displayConfirmDelete = false" styleClass="p-button-danger" label="No"></p-button>
     </p-footer>
   </p-dialog>
